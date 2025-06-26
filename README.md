@@ -14,16 +14,24 @@ The project explores different machine learning techniques (LSTM, XGBoost, SVM, 
 ---
 
 ## 📁 Repository Structure
-├── improved_lstm_savedmodel/ # Exported final LSTM model
-├── pkls/ # Serialized model and scaler files (.pkl, .keras)
-├── trainings/ # Jupyter notebooks for experimentation
-├── batch_consumer.ipynb # Inference workflow (notebook version)
-├── batch_consumer.py # Batch inference script
-├── batch_consumer_pipeline.py # Batch pipeline with Azure ML integration
-├── model_training.ipynb # Main training notebook
-├── submit_pipeline.py # Script to submit a pipeline run
-├── out.csv # Output predictions (example)
-
+/tfm_azureml
+├── improved_lstm_savedmodel/   # Exported SavedModel format for final LSTM
+├── pkls/                       # Serialized models and scalers (e.g., .pkl, .keras)
+│   ├── features_improved_lstm.pkl
+│   ├── scaler_improved_lstm.pkl
+│   └── improved_lstm.keras
+├── trainings/                  # Jupyter notebooks for model experimentation
+│   ├── data_prep_svm_nbayes.ipynb
+│   ├── experimentacion_lstm_con_fuga_datos.ipynb
+│   ├── experimentacion_lstm_corregido.ipynb
+│   └── experimentacion_xgboost.ipynb
+├── batch_consumer.ipynb        # Notebook version of the batch consumer
+├── batch_consumer.py           # Script for batch inference
+├── batch_consumer_pipeline.py  # Batch inference integrated as Azure ML pipeline
+├── model_training.ipynb        # Notebook for LSTM model training
+├── submit_pipeline.py          # Submit job/pipeline to Azure ML
+├── out.csv                     # Sample prediction output
+└── README.md                   # Project documentation
 
 ---
 
